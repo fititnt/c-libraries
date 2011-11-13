@@ -3,7 +3,7 @@
 *.com
 *.class
 *.dll
-*.exe
+#*.exe #exes ok
 *.o
 *.so
 
