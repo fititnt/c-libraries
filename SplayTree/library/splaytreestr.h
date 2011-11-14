@@ -34,6 +34,8 @@ struct SplayTreeStr
 ///                             Functions                                    ///
 //Initialize a new Tree
 struct SplayTreeStr* Initialize(char *data);
+//Insert data on Tree (alias to function Splay)
+//struct SplayTreeStr* Insert(struct SplayTreeStr* root, char *data);
 //Rotate to right tree
 struct SplayTreeStr* RotationLeft(struct SplayTreeStr* node, struct SplayTreeStr* root);
 //Rotate to right tree
@@ -64,6 +66,14 @@ struct SplayTreeStr* Initialize(char *data)
     node->right = NULL;
     return node;
 }
+/*
+struct SplayTreeStr* Insert(struct SplayTreeStr* root, char *data){
+    return Splay(data, root);
+}
+struct SplayTreeStr* Splay(struct SplayTreeStr* root, char data[STRMAX]){
+
+}
+*/
 /*
 PtNodo* Novo(int key, PtNodo* esq, PtNodo* dir)
 {

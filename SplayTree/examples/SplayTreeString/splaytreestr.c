@@ -18,7 +18,7 @@ int main()
 {
     printf("Splay Tree (Data type String) start \n");
     struct SplayTreeStr *node = malloc(sizeof(SplayTreeSN));
-    node = Initialize((char*)"Fist node string");
+    node = Initialize("Fist node string");
     PrintSplayTreeStrNode(node);
     getch();
     return 0;
