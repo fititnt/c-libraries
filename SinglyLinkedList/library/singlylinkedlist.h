@@ -2,7 +2,7 @@
  * @file singlylinkedlist.h
  * @details SinglyLinkedList
  * @see http://en.wikipedia.org/wiki/Linked_list
- * @version
+ * @version 0.1beta
  * @author Emerson Rocha Luiz
  * @copyright MIT. See license.txt
  */
