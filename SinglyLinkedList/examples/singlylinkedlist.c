@@ -2,7 +2,7 @@
  * @file singlylinkedlist.c
  * @details Singly Linked List
  * @see http://en.wikipedia.org/wiki/Linked_list
- * @version
+ * @version 0.1beta
  * @author Emerson Rocha Luiz
  * @copyright MIT. See license.txt
  */
@@ -16,19 +16,19 @@ int main()
 {
     printf("Singly Linked List start \n");
 
-    struct Node* list = initialize();
-    struct Data data;
+    struct NodeSLL* list = initializeSLL();
+    struct DataSLL data;
 
     strcpy( data.item, "Fist");
-    list = insertNode ( list, data );
+    list = insertSLLNode ( list, data );
     strcpy( data.item, "Second");
-    list = insertNode ( list, data );
+    list = insertSLLNode ( list, data );
     strcpy( data.item, "Third");
-    list = insertNode ( list, data );
+    list = insertSLLNode ( list, data );
 
-    printList(list);
+    printSLLList(list);
 
-    if ( searchNode( list, data ) != NULL ){
+    if ( searchSLLNode( list, data ) != NULL ){
         printf("\n%s found \n", data.item);
     }
 

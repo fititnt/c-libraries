@@ -31,6 +31,10 @@ Operational System :
 
 ----------------------------------- Changelog ----------------------------------
 
+2011-11-14:...
+    ^ Changed functions and type names, adding `SLL` to reduce conflicts with
+        other libraries
+
 2011-11-14: 0.1beta
     + Created initialize()
     + Created insertNode()
