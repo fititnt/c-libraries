@@ -1,14 +1,14 @@
 /* 
- * File:   binarysearchtree.c
+ * File:   binarytree.c
  * Author: fititnt
  *
- * Created on 20 de Novembro de 2011, 05:03
+ * Created on 20 de Novembro de 2011, 04:56
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../library/binarysearchtree.h"
+#include "../library/binarytree.h"
 
 typedef char TipoInfo;
 struct TX{
@@ -25,7 +25,7 @@ typedef struct TX X;
 int main(int argc, char** argv) {
 
     char palavra[20];
-    NodeBSTType *arv = NULL, *procurado = NULL;
+    NodeBSType *arv = NULL, *procurado = NULL;
     X *l = NULL, *aux;
     int i;
 
@@ -33,14 +33,14 @@ int main(int argc, char** argv) {
     gets(palavra);
 
     for (i = 0; i < strlen(palavra); i++)
-        arv = InsertNodeBST(arv, palavra[i]);
+        arv = InsertNodeBT(arv, palavra[i]);
 
     // testando Caminhamentos  
-    PrintNodeBSTBefore(arv);
+    PrintNodeBTBefore(arv);
     printf("----\n\n");
-    PrintNodeBSTCenter(arv);
+    PrintNodeBTCenter(arv);
     printf("----\n\n");
-    PrintNodeBSTAfter(arv);
+    PrintNodeBTAfter(arv);
 
 
     if (l == NULL) puts("nulo");
@@ -50,3 +50,4 @@ int main(int argc, char** argv) {
 
     return (EXIT_SUCCESS);
 }
+
