@@ -6,10 +6,19 @@
  * @author Emerson Rocha Luiz
  * @copyright MIT. See license.txt
  */
+#ifndef AVLTREE_H
+#define	AVLTREE_H
 
-#ifndef AVLTREE_H_INCLUDED
-#define AVLTREE_H_INCLUDED
+#ifdef	__cplusplus
+extern "C" {
+#endif
 
 
 
-#endif // AVLTREE_H_INCLUDED
+
+#ifdef	__cplusplus
+}
+#endif
+
+#endif	/* AVLTREE_H */
+
