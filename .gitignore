@@ -1,4 +1,10 @@
-SinglyLinkedList/doc/html/
+/SinglyLinkedList/doc/html/
+/BinarySearchTree/doc/html/
+/BinarySearchTree/build/
+/BinarySearchTree/dist/
+/BinarySearchTree/nbproject/
+/BinarySearchTree/.dep.inc
+/BinarySearchTree/Makefile
 
 
 # Compiled source #

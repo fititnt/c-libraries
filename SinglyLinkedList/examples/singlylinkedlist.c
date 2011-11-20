@@ -25,6 +25,12 @@ int main()
     list = insertSLLNode ( list, data );
     strcpy( data.item, "Third");
     list = insertSLLNode ( list, data );
+    strcpy( data.item, "33");
+    list = insertSLLNode ( list, data );
+    strcpy( data.item, "Thi444rd");
+    list = insertSLLNode ( list, data );
+
+    list = removeSLLNode( list, data );
 
     printSLLList(list);
 
