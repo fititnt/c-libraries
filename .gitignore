@@ -47,14 +47,40 @@
 /Stack/.dep.inc
 /Stack/Makefile
 
+/GraphAdjacencyList/doc/html/
+/GraphAdjacencyList/build/
+/GraphAdjacencyList/dist/
+/GraphAdjacencyList/nbproject/
+/GraphAdjacencyList/.dep.inc
+/GraphAdjacencyList/Makefile
 
+/GraphAdjacencyMatrix/doc/html/
+/GraphAdjacencyMatrix/build/
+/GraphAdjacencyMatrix/dist/
+/GraphAdjacencyMatrix/nbproject/
+/GraphAdjacencyMatrix/.dep.inc
+/GraphAdjacencyMatrix/Makefile
+
+/GraphIncidenceList/doc/html/
+/GraphIncidenceList/build/
+/GraphIncidenceList/dist/
+/GraphIncidenceList/nbproject/
+/GraphIncidenceList/.dep.inc
+/GraphIncidenceList/Makefile
+
+/GraphIncidenceMatrix/doc/html/
+/GraphIncidenceMatrix/build/
+/GraphIncidenceMatrix/dist/
+/GraphIncidenceMatrix/nbproject/
+/GraphIncidenceMatrix/.dep.inc
+/GraphIncidenceMatrix/Makefile
 
 # Compiled source #
 ###################
 *.com
 *.class
 *.dll
-*.exe #exes ...
+*.exe
 *.o
 *.so
 
@@ -71,7 +97,6 @@
 *.tar
 #*.zip
 *.war
-
 
 # Logs and databases #
 ######################

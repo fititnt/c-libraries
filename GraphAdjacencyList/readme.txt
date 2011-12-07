@@ -1,4 +1,8 @@
-ANSI-C Binary Tree Library
+ANSI-C Graph Adjacency List
+
+@see http://en.wikipedia.org/wiki/Graph_(data_structure)#Representations
+@see http://en.wikipedia.org/wiki/Glossary_of_graph_theory
+@see http://en.wikipedia.org/wiki/Adjacency_list
 
 Author: 
     Emerson Rocha Luiz
@@ -15,7 +19,7 @@ License:
         - Massachusetts Institute of Technology. See license-mit.txt
 	
 ----------------------------------- How to use ---------------------------------
-For now, this class still alpha. Therefore, if you really want to use it, be 
+For now, this library still alpha. Therefore, if you really want to use it, be 
 careful.
 
 Read more in http://fititnt.org/extensoes/politica-de-versionamento.html (pt)
@@ -31,8 +35,8 @@ Operational System :
 
 ----------------------------------- Changelog ----------------------------------
 
-2011-xx-xx: 0.1alpha
-! Created.
+2011-12-01: 0.1alpha
+! Created. Just a draft
 
 CHANGELOG LEGEND:
 + Added
