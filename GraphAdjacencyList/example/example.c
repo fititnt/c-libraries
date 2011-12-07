@@ -14,12 +14,10 @@
 #include "../library/GraphAdjacencyList.h"
 
 int main(int argc, char** argv) {
-
     printf("hi!");
     GALGraph G;
     GALCreate(&G, 6);
     GALadd(&G, 0, 1);
-
     return (EXIT_SUCCESS);
 }
 

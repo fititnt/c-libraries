@@ -1,6 +1,18 @@
 /**
  * @file GraphAdjacencyList.h
- * @details ANSI-C GraphAdjacencyList header
+ * @details ANSI-C  header
+ * @details 
+ *      ANSI-C GraphAdjacencyList header
+ * 
+ *      Data structures:
+ *              -> Graph Adjacency List
+ *                      @see http://en.wikipedia.org/wiki/Adjacency_list
+ *                      This entire library
+ *              -> Simply Linked list
+ *                      @see http://en.wikipedia.org/wiki/Linked_list
+ *                      Nodes used on the Graph
+ *     
+ * 
  * @version 0.1alpha
  * @date 2011-12-06
  * @author Emerson Rocha Luiz

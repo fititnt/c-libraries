@@ -10,7 +10,7 @@ Author:
     http://fititnt.org
 
 Copyright:
-    Copyright (C) 2011 Webdesign Assessoria em Tecniligia da Informacao. All 
+    Copyright (C) 2011 Webdesign Assessoria em Tecnologia da Informacao. All 
     rights reserved.
 
 License:
@@ -35,7 +35,20 @@ Operational System :
 
 ----------------------------------- Changelog ----------------------------------
 
-2011-12-01: 0.1alpha
+2011-12-07: 1.0beta1
+! GraphAdjacencyMatrix now works. Changed to 1.0beta1
++ Added to GraphAdjacencyMatrix newGMA()
++ Added to GraphAdjacencyMatrix freeGMA()
++ Added to GraphAdjacencyMatrix setGMANode()
++ Added to GraphAdjacencyMatrix getGMANode()
++ Added to GraphAdjacencyMatrix delGMANode()
++ Added to GraphAdjacencyMatrix printGMA()
++ Added to GraphAdjacencyMatrix example2.c
+^ Changed on GraphAdjacencyMatrix example.c to example1.c
+- Removed on GraphAdjacencyMatrix readme2.txt
+
+
+2011-12-06: 0.1alpha
 ! Created. Just a draft
 
 CHANGELOG LEGEND:

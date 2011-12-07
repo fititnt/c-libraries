@@ -1,7 +1,7 @@
 /**
  * @file example.c
  * @details ANSI-C GraphAdjacencyMatrix example
- * @version 0.1alpha
+ * @version 1.0beta1
  * @date 2011-12-06
  * @author Emerson Rocha Luiz
  * @copyright 
