@@ -26,132 +26,100 @@
 extern "C" {
 #endif
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
-    typedef struct sGALNode GALNode;
-    typedef struct sGALGraph GALGraph;
-
-    //void GALCreate(GALGraph* G, int n);
-    //void GALFree(GALGraph* G);
-    //void GALadd(GALGraph* G, int x, int y);
-    //void GALdelete(GALGraph* G, int x, int y);
+    //typedef struct sDAWG DAWGNode;
 
     /**
-     *
+     * letter: Letter of this node
+     * end: bit 1 if this node represent one end, 0 if not
+     * next: pointer for next DAWG node
+     * @todo change 'int end' to bit
      */
-    typedef struct sGALNode {
-        int v;
-        struct sGALNode* next;
-    } GALNode;
+    typedef struct sDAWGNode {
+        char letter;
+        int end; //unsigned end : 1;
+        struct sDAWGNode* next;
+    } DAWGNode;
 
     /**
-     *
+     * Allocate memory of the root of DAWGNode
+     * @param 
      */
-    typedef struct sGALGraph {
-        int n;
-        GALNode** list;
-    } GALGraph;
-
-    /**
-     * 
-     * @param G
-     * @param n
-     */
-    void GALCreate(GALGraph* G, int n) {
-        G->list = calloc(n, sizeof (GALNode*));
-        G->n = n;
+    DAWGNode* newDAWG(DAWGNode* N) {
+        N = (DAWGNode*) malloc(sizeof (DAWGNode));
+        if (N == 0) {
+            return NULL; //Cannot allocate memory
+        } else {
+            N->end = 1;
+            N->letter = 0; //@todo turn it a NULL or something
+            N->next = NULL;
+        }
     }
 
     /**
      * 
-     * @param G
-     * @return void
+     * @param Root
+     * @param Word
+     * @param CaseSensitive 1 for yes, 0 for no (and insert all as lowercase)
+     * @return result -1 for error of int
      */
-    void GALFree(GALGraph* G) {
-        int i;
-        for (i = 0; i < G->n; i++) {
-            GALGraph* l = (GALGraph*) G->list[i]; // GALGraph
-            while (l) {
-                GALGraph* r = l; // GALGraph
-                l = (GALGraph*) l->list;
-                free(r);
+    int newDAWGWord(DAWGNode* Root, char *Word, int CaseSensitive) {
+        /*
+        char *ptr = NULL;
+        for (ptr = (char*)&Word; *ptr; ptr++) {
+            if (*ptr >= 65 && *ptr <= 90) { //A-Z
+                *ptr += 32;
             }
         }
-        free(G->list);
-    }
-
-    /**
-     * Tests whether there is an edge from node x to node y
-     * 
-     * @param G
-     * @param x
-     * @param y
-     */
-    void adjacent(int G, int x, int y);
-
-    /**
-     * Lists all nodes y such that there is an edge from x to y.
-     * 
-     * @param G
-     * @param x
-     */
-    void neighbors(int G, int x);
-
-    /**
-     * Adds to G the edge from x to y, if it is not there.
-     * 
-     * @param G
-     * @param x
-     * @param y
-     */
-    void GALadd(GALGraph* G, int x, int y) {
-        GALNode** ap_l = &G->list[x];
-        while (*ap_l != NULL &&
-                (*ap_l)->v < y)
-            ap_l = &(*ap_l)->next;
-        if (*ap_l == NULL || (*ap_l)->v != y) {
-            GALNode* n = malloc(sizeof (GALNode));
-            n->v = y;
-            n->next = *ap_l;
-            *ap_l = n;
+        print  
+                
+        f("\n\n%s\n", Word);
+        */   
+        int i;
+        for (i = 0; i < strlen(Word); i++) {
+            
+            if (CaseSensitive && Word[i] >= 65 && Word[i] <= 90) {
+                //st[i] = tolower(st[ i ]);
+                //Word[i] = tolower(Word[i]);
+                //Word[i] = Word[i];
+                
+                (*Word+i) = tolower( (*Word+i) );
+                //break;
+            }
+            //Word[i] = tolower(Word[i]);
+            //strcpy((char*)Word[i], (char*)tolower(Word[i]) );
+            //(char*)Word[i] = tolower(Word[i]);
+            //printf("\n %c, %c", (*Word+i), tolower(Word[i]));
+             
         }
+        printf("\n %s", Word);
     }
 
     /**
-     * Removes the edge from x to y, if it is there.
+     * Add a new node
+     * @protected Cannot be accessed out of this file
      * 
-     * @param G
-     * @param x
-     * @param y
+     * @param Node Pointer for new node to allocate memomy and insert data
+     * @param c Letter to Insert
+     * @param end Integer 1 for end of word, 0 for not
+     * @return Node
      */
-    void GALdelete(GALGraph* G, int x, int y) {
-        GALNode** ap_l = &G->list[x];
-        while (*ap_l != NULL &&
-                (*ap_l)->v < y)
-            ap_l = &(*ap_l)->next;
-        if (*ap_l != NULL && (*ap_l)->v == y) {
-            GALNode* r = *ap_l;
-            *ap_l = (*ap_l)->next;
-            free(r);
+    static DAWGNode * newDAWGNode(DAWGNode* Node, char c, int end) {
+        Node = (DAWGNode*) malloc(sizeof (DAWGNode));
+        if (Node == 0) {
+            return NULL; //Cannot allocate memory
+        } else {
+            Node->end = end;
+            Node->letter = c; //@todo turn it a NULL or something
+            Node->next = NULL;
         }
+        return Node;
     }
 
-    /**
-     * Returns the value associated with the node x.
-     * 
-     * @param G
-     * @param x
-     */
-    void get_node_value(int G, int x);
-
-    /**
-     * Sets the value associated to the edge (x,y) to v.
-     * 
-     * @param G
-     * @param x
-     * @param y
-     * @param v
-     */
-    void set_edge_value(int G, int x, int y, int v);
 
 
 #ifdef	__cplusplus
