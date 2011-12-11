@@ -10,7 +10,7 @@ Author:
     http://fititnt.org
 
 Copyright:
-    Copyright (C) 2011 Webdesign Assessoria em Tecniligia da Informacao. All 
+    Copyright (C) 2011 Webdesign Assessoria em Tecnologia da Informação. All 
     rights reserved.
 
 License:

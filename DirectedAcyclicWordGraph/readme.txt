@@ -1,8 +1,7 @@
-ANSI-C Graph Adjacency Matrix
+ANSI-C Directed Acyclic Word Graph
 
 @see http://en.wikipedia.org/wiki/Graph_(data_structure)#Representations
-@see http://en.wikipedia.org/wiki/Glossary_of_graph_theory
-@see http://en.wikipedia.org/wiki/Adjacency_matrix
+@see http://en.wikipedia.org/wiki/Directed_acyclic_word_graph
 
 Author: 
     Emerson Rocha Luiz
@@ -35,20 +34,7 @@ Operational System :
 
 ----------------------------------- Changelog ----------------------------------
 
-2011-12-07: 1.0beta1
-! GraphAdjacencyMatrix now works. Changed to 1.0beta1
-+ Added to GraphAdjacencyMatrix newGMA()
-+ Added to GraphAdjacencyMatrix freeGMA()
-+ Added to GraphAdjacencyMatrix setGMANode()
-+ Added to GraphAdjacencyMatrix getGMANode()
-+ Added to GraphAdjacencyMatrix delGMANode()
-+ Added to GraphAdjacencyMatrix printGMA()
-+ Added to GraphAdjacencyMatrix example2.c
-^ Changed on GraphAdjacencyMatrix example.c to example1.c
-- Removed on GraphAdjacencyMatrix readme2.txt
-
-
-2011-12-06: 0.1alpha
+2011-12-12: 0.1alpha
 ! Created. Just a draft
 
 CHANGELOG LEGEND:

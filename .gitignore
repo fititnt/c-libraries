@@ -75,6 +75,13 @@
 /GraphIncidenceMatrix/.dep.inc
 /GraphIncidenceMatrix/Makefile
 
+/DirectedAcyclicWordGraph/doc/html/
+/DirectedAcyclicWordGraph/build/
+/DirectedAcyclicWordGraph/dist/
+/DirectedAcyclicWordGraph/nbproject/
+/DirectedAcyclicWordGraph/.dep.inc
+/DirectedAcyclicWordGraph/Makefile
+
 # Compiled source #
 ###################
 *.com

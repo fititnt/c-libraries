@@ -13,9 +13,9 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-    
+
 #include <stdlib.h>
-    
+
     typedef struct NodeBS NodeBSType;
 
     struct NodeBS {
@@ -26,8 +26,6 @@ extern "C" {
 
     NodeBSType* InsertNodeBT(NodeBSType *a, char data);
     NodeBSType* SearchNodeBS(NodeBSType *a, char chave);
-
-
 
     NodeBSType* InsertNodeBT(NodeBSType *node, char data) {
         if (node == NULL) {
@@ -81,10 +79,6 @@ extern "C" {
             printf("%c\n", node->data);
         }
     }
-
-
-
-
 
 #ifdef	__cplusplus
 }
